@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动div</title>
+	<style>
+   #vi{
+   	width: 100px;
+   	height:100px;
+   	background:red;
+   	margin-top:50px;
+   	position:absolute;
+   	left:0px;
+   	top:0px;
+   }
+
+
+	</style>
+</head>
+<body>
+	<input type="button" value="开始运动" onclick="bb()">
+	<div id="vi"></div>
+	
+</body>
+<script>
+var timer=null;
+	function bb(){
+    var vi1=document.getElementById("vi");
+    timer=setInterval(function(){
+    	var sper=10;
+    	
+    	if(vi1.offsetLeft==300){
+              clearInterval(timer);
+    	}else{
+    		vi1.style.left=vi1.offsetLeft+sper+"px";
+    	}
+      
+    },30)
+
+
+
+	}
+</script>
+</html>
